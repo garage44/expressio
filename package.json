@@ -1,0 +1,30 @@
+{
+  "name": "@expressio/expressio-ce",
+  "description": "Community edition of Expressio - Automated i18n tooling for software projects",
+  "version": "1.9.0",
+  "author": "Garage44",
+  "main": "service.js",
+  "bin": {
+    "expressio": "./service.js"
+  },
+  "files": [
+    "api/*",
+    "lib/*",
+    "public/**/*",
+    "LICENSE.md",
+    "README.md",
+    "service.js"
+  ],
+  "license": "AGPL",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production BUN_ENV=development bun service.ts build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_ENV=development BUN_ENV=development bun run --watch service.ts start",
+    "lint:scss": "stylelint **/*.scss",
+    "lint:ts": "eslint **/*.{ts,tsx}"
+  },
+  "type": "module"
+}
