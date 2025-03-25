@@ -1,6 +1,6 @@
 import fs from 'fs/promises'
-import os from 'os'
-import path from 'path'
+import os from 'node:os'
+import path from 'node:path'
 
 import {config} from '../lib/config.ts'
 import {enola, logger, workspaces} from '../service.ts'

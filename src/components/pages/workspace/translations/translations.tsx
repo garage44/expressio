@@ -111,7 +111,7 @@ events.on('app:init', () => {
     })
 
     // Add handler for full i18n state updates
-    ws.on('/i18n/state', ({workspace_id, i18n, history_size, timestamp}) => {
+    ws.on('/i18n/state', ({workspace_id, i18n, _history_size, timestamp}) => {
 
         // Only apply updates for the current workspace
         if (!$s.workspace || $s.workspace.config.workspace_id !== workspace_id) {

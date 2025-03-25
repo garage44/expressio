@@ -1,5 +1,5 @@
 {
-    "extends": "../../tsconfig.json",
+    "extends": "@garage44/tsconfig",
     "compilerOptions": {
         "baseUrl": "./",
         "esModuleInterop": true,
@@ -10,7 +10,7 @@
         },
         "module": "es2022",
         "target": "es2023",
-        "types": ["bun", "node"]
+        "types": ["@types/node", "bun-types"]
     },
     "include": [
         "./src"
