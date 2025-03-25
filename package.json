@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@garage44/common": "^1.0.2",
+    "@garage44/eslint-config": ">= 1",
     "figlet": "^1.8.0"
   },
   "files": [
