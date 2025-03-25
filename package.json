@@ -1,11 +1,15 @@
 {
   "name": "@expressio/expressio-ce",
   "description": "Community edition of Expressio - Automated i18n tooling for software projects",
-  "version": "1.9.0",
+  "version": "2.0.0",
   "author": "Garage44",
   "main": "service.js",
   "bin": {
     "expressio": "./service.js"
+  },
+  "dependencies": {
+    "@garage44/common": "^1.0.2",
+    "figlet": "^1.8.0"
   },
   "files": [
     "api/*",
