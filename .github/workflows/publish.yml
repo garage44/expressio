@@ -5,15 +5,12 @@ on:
     branches:
       - main
     paths:
-      - 'expressio/**'
+      - '**'
       - '.github/workflows/publish.yml'
 
 jobs:
   lint-and-publish:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: expressio
 
     steps:
       - uses: actions/checkout@v4
