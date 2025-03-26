@@ -11,12 +11,10 @@ export function Translation({group, path}) {
     const path_update = path.join('.')
 
     async function translate() {
-        console.log("BEFORE")
-        const result = await ws.post(`/api/workspaces/${$s.workspace.config.workspace_id}/translate`, {
+        await ws.post(`/api/workspaces/${$s.workspace.config.workspace_id}/translate`, {
             path,
             value: group,
         })
-        console.log("RES", result)
     }
 
     return <div class={classes('c-translation', {

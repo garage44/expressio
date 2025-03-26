@@ -111,7 +111,7 @@ events.on('app:init', () => {
     })
 
     // Add handler for full i18n state updates
-    ws.on('/i18n/state', ({workspace_id, i18n, _history_size, timestamp}) => {
+    ws.on('/i18n/state', ({workspace_id, i18n, timestamp}) => {
 
         // Only apply updates for the current workspace
         if (!$s.workspace || $s.workspace.config.workspace_id !== workspace_id) {
@@ -128,12 +128,9 @@ events.on('app:init', () => {
     })
 
     // Add handler for undo/redo responses
-    ws.on('/i18n/history', ({action, success}) => {
+    ws.on('/i18n/history', ({success}) => {
         if (success) {
-            console.log(`History action '${action}' was successful`)
             // The state update will come through the /i18n/state handler
-        } else {
-            console.log(`History action '${action}' failed - no more history available`)
         }
     })
 })

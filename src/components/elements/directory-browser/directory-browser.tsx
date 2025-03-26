@@ -20,7 +20,7 @@ async function loadDirectory(path = null) {
         const response = await ws.get('/api/workspaces/browse', {
             path,
         })
-        console.log('response', response)
+
         mergeDeep(state, {
             current: response.current,
             directories: response.directories,

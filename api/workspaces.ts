@@ -1,21 +1,11 @@
+import {enola, logger, workspaces} from '../service.ts'
+import {api} from '../lib/ws-server.ts'
+import {config} from '../lib/config.ts'
 import fs from 'fs/promises'
 import os from 'node:os'
 import path from 'node:path'
 
-import {config} from '../lib/config.ts'
-import {enola, logger, workspaces} from '../service.ts'
-import {api} from '../lib/ws-server.ts'
 import {syncLanguage} from '../lib/sync.ts'
-
-interface WebSocketParams {
-    session?: {
-        userid: string
-    }
-}
-
-interface BrowseData {
-    path?: string
-}
 
 interface WorkspaceConfig {
     translator: unknown
@@ -24,13 +14,6 @@ interface WorkspaceConfig {
 
 interface Workspace {
     config: WorkspaceConfig
-}
-
-interface WebSocketMessage {
-    data?: Record<string, unknown>
-    id?: string
-    method?: string
-    url: string
 }
 
 // Auth middleware that can be reused across workspace routes
