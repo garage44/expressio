@@ -1,5 +1,5 @@
 import {WebSocketServerManager, createWebSocketServer} from '@garage44/common/lib/ws-server'
-import {Server} from 'http'
+import {Server} from 'node:http'
 import {WebSocket} from 'ws'
 import {getSession} from '@garage44/common/lib/middleware'
 

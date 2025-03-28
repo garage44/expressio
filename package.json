@@ -10,7 +10,8 @@
   "dependencies": {
     "@garage44/common": "latest",
     "@garage44/eslint-config": "latest",
-    "figlet": "^1.8.0"
+    "figlet": "^1.8.0",
+    "ws": "^8.18.0"
   },
   "files": [
     "api/*",

@@ -12,16 +12,12 @@
         "jsxImportSource": "preact",
         "moduleResolution": "bundler",
         "noEmit": true,
+        "paths": {
+            "@/*": ["./src/*"]
+        },
         "skipLibCheck": true,
         "sourceMap": true,
         "target": "ES2023",
-        "types": ["bun", "node"],
-        "paths": {
-            "@/*": ["./src/*"],
-            "@garage44/common/*": ["../common/*"]
-        }
-    },
-    "include": [
-        "./src"
-    ]
+        "types": ["bun", "node"]
+    }
 }

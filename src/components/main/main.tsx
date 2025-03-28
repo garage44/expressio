@@ -25,6 +25,7 @@ export const Main = () => {
             if (context.authenticated) {
                 ws.connect()
                 const config = await api.get('/api/config')
+
                 $s.user.authenticated = true
                 mergeDeep($s, {
                     enola: config.enola,
