@@ -48,6 +48,7 @@ export default async function(app) {
         // Add missing workspaces
         for (const description of req.body.workspaces) {
             if (!workspaces.get(description.workspace_id)) {
+                console.log("ADD")
                 await workspaces.add(description)
             }
         }

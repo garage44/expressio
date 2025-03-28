@@ -1,16 +1,25 @@
 {
-    "extends": "@garage44/tsconfig",
     "compilerOptions": {
+        "allowImportingTsExtensions": true,
         "baseUrl": "./",
         "esModuleInterop": true,
-        "moduleResolution": "node",
+        "lib": [
+            "DOM",
+            "DOM.Iterable",
+            "ES2023"
+        ],
+        "jsx": "react-jsx",
+        "jsxImportSource": "preact",
+        "moduleResolution": "bundler",
+        "noEmit": true,
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "target": "ES2023",
+        "types": ["bun", "node"],
         "paths": {
             "@/*": ["./src/*"],
             "@garage44/common/*": ["../common/*"]
-        },
-        "module": "es2022",
-        "target": "es2023",
-        "types": ["@types/node", "bun-types"]
+        }
     },
     "include": [
         "./src"
