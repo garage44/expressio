@@ -21,7 +21,6 @@ export const initWebSocketServer = (app, config) => {
         path: '/ws',
         server,
         sessionMiddleware: getSession(config),
-
     })
 
     // Store reference to the manager

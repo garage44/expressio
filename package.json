@@ -11,7 +11,7 @@
     "@garage44/common": "latest",
     "@garage44/eslint-config": "latest",
     "figlet": "^1.8.0",
-    "ws": "^8.18.0"
+    "ws": "^8.18.1"
   },
   "files": [
     "api/*",
@@ -27,7 +27,7 @@
   },
   "scripts": {
     "build": "NODE_ENV=production BUN_ENV=development bun service.ts build",
-    "link": "cd ../bunchy && bun link && cd ../enola && bun link && cd ../tsconfig && bun link && cd ../eslint-config && bun link && cd ../common && bun link && cd ../expressio && bun link @garage44/bunchy @garage44/enola @garage44/tsconfig @garage44/eslint-config @garage44/common",
+    "link": "cd ../bunchy && bun link && cd ../enola && bun link && cd ../eslint-config && bun link && cd ../common && bun link && cd ../expressio && bun link @garage44/bunchy @garage44/enola @garage44/eslint-config @garage44/common && cd ../bunchy && bun link @garage44/common",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "NODE_ENV=development BUN_ENV=development bun run --watch service.ts start",
     "lint:scss": "stylelint **/*.scss",
@@ -40,6 +40,6 @@
     "bun-types": "^1.2.6",
     "preact": "^10.19.6",
     "preact-router": "^4.1.2",
-    "stylelint": "^15.10.3"
+    "stylelint": "^16.17.0"
   }
 }
